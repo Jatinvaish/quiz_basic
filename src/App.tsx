@@ -12,7 +12,7 @@ const TOTAL_QUESTIONS = 10;
 
 const App: React.FC = () => {
   const { state, dispatch, resetGame } = useQuiz();
-  const { loading, questions, number, userAnswers, score, gameOver, selectedAnswer, hasSubmitted, feedback, submittedAnswers } = state;
+  const { loading, questions, number,  score, gameOver, selectedAnswer, hasSubmitted, feedback, submittedAnswers } = state;
 
   const handleAnswerSelection = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'SELECT_ANSWER', payload: e.currentTarget.value });
